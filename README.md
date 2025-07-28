@@ -1,7 +1,5 @@
 # Minecraft Bedrock Launcher
 
-![Giao diện ứng dụng](https://placehold.co/600x400/aabbcc/ffffff?text=Giao+diện+ứng+dụng)
-
 Ứng dụng desktop viết bằng **C++ và Qt**, giúp quản lý và khởi chạy **Minecraft Bedrock Edition** trên máy ảo Android x86 (VirtualBox) một cách dễ dàng và tiện lợi.
 
 ---
