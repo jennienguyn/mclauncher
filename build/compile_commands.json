@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/root/codespaces/build",
+  "command": "/usr/bin/x86_64-w64-mingw32-g++    -o CMakeFiles/mcpelauncher.dir/main.cpp.obj -c /root/codespaces/main.cpp",
+  "file": "/root/codespaces/main.cpp"
+}
+]

@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run qmake",
+            "type": "shell",
+            // Gọi qmake.exe của bộ Qt MinGW
+            "command": "C:/Qt/6.9.1/mingw_64/bin/qmake.exe", // Đảm bảo đường dẫn này đúng
+            "args": [
+                "${workspaceFolder}/build.pro" // Hoặc launcher.pro, tùy thuộc vào tên tệp .pro thực tế của bạn
+                // Không cần "-spec win32-msvc" nữa
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+                // Không cần chỉ định shell là cmd.exe nữa, PowerShell cũng hoạt động tốt với MinGW
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$gcc" // Thay đổi problem matcher sang GCC
+        },
+        {
+            "label": "Build Qt Project",
+            "type": "shell",
+            // Đường dẫn đến mingw32-make.exe
+            "command": "C:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe", // Đảm bảo đường dẫn này đúng
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$gcc", // Thay đổi problem matcher sang GCC
+            "dependsOn": "Run qmake"
+        },
+        {
+            "label": "Clean Qt Project",
+            "type": "shell",
+            // Đường dẫn đến mingw32-make.exe
+            "command": "C:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe", // Đảm bảo đường dẫn này đúng
+            "args": ["clean"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$gcc" // Thay đổi problem matcher sang GCC
+        }
+    ]
+}

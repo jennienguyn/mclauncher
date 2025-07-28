@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include", // Thư mục chứa VirtualBox.h, VirtualBox_i.c
+                // Đường dẫn đến các tệp tiêu đề Qt được biên dịch với MSVC
+                "C:/Qt/6.9.1/msvc2022_64/include", // Đảm bảo đường dẫn này đúng với phiên bản Qt MSVC của bạn
+                "C:/Qt/6.9.1/msvc2022_64/include/QtCore",
+                "C:/Qt/6.9.1/msvc2022_64/include/QtGui",
+                "C:/Qt/6.9.1/msvc2022_64/include/QtWidgets",
+                // Các đường dẫn Windows SDK (thường tự động được tìm thấy với MSVC, nhưng liệt kê để đảm bảo)
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/ucrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/um",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/shared",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/winrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.20348.0/cppwinrt",
+                // Đường dẫn đến thư mục ATL (nơi atlbase.h nằm)
+                // THAY THẾ BẰNG ĐƯỜNG DẪN CHÍNH XÁC CỦA BẠN SAU KHI CÀI ĐẶT VS WORKLOAD
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/atlmfc/include" // Ví dụ: Kiểm tra phiên bản MSVC của bạn
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE",
+                "QT_DEPRECATED_NO_WARNINGS",
+                "QT_WIDGETS_LIB",
+                "QT_GUI_LIB",
+                "QT_CORE_LIB"
+            ],
+            // QUAN TRỌNG: Thay đổi compilerPath sang cl.exe của MSVC
+            // THAY THẾ BẰNG ĐƯỜNG DẪN CHÍNH XÁC CỦA BẠN
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe", // Ví dụ: Kiểm tra phiên bản MSVC của bạn
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            // QUAN TRỌNG: Thay đổi intelliSenseMode sang windows-msvc-x64
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

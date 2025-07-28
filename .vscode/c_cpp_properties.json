@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include", // Thư mục chứa VirtualBox.h, VirtualBox_i.c
+                // Đường dẫn đến các tệp tiêu đề Qt được biên dịch với MinGW
+                "C:/Qt/6.9.1/mingw_64/include", // Đảm bảo đường dẫn này đúng với phiên bản Qt MinGW của bạn
+                "C:/Qt/6.9.1/mingw_64/include/QtCore",
+                "C:/Qt/6.9.1/mingw_64/include/QtGui",
+                "C:/Qt/6.9.1/mingw_64/include/QtWidgets",
+                // Đường dẫn đến các tệp tiêu đề của MinGW GCC
+                "C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
+                "C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
+                "C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include"
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE",
+                "__MINGW32__", // Quan trọng: Định nghĩa này cho MinGW
+                "QT_DEPRECATED_NO_WARNINGS",
+                "QT_WIDGETS_LIB",
+                "QT_GUI_LIB",
+                "QT_CORE_LIB"
+            ],
+            // QUAN TRỌNG: Thay đổi compilerPath sang g++.exe của MinGW
+            "compilerPath": "C:/Qt/Tools/mingw1310_64/bin/g++.exe", // Đảm bảo đường dẫn này đúng
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            // QUAN TRỌNG: Thay đổi intelliSenseMode sang windows-gcc-x64
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

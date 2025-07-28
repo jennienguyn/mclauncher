@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "qmessagebox": "cpp"
+    },
+    "cmake.ignoreCMakeListsMissing": true
+}
