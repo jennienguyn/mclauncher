@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# mclauncher
-=======
 # Minecraft Bedrock Launcher
 
 ![Giao diện ứng dụng](https://placehold.co/600x400/aabbcc/ffffff?text=Giao+diện+ứng+dụng)
